@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, Button} from 'react-native';
-import Search from '../Components/Search.Component';
+import {Platform, StyleSheet, Text, View, Button, TextInput} from 'react-native';
 
-export default class DevList extends Component{
+export default class Search extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Java Developers!</Text>
-        <Search />
+        <TextInput style={styles.searchBox} placeholder='Search' />
       </View>
     );
   }
@@ -20,11 +18,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  title: {
+  searchBox: {
+    borderColor: '#000000', 
     fontSize: 20,
     textAlign: 'center',
-    marginTop: 55,
-    borderBottomColor: '#FFFFFF', 
-    borderBottomWidth: 50,
+    marginTop: 5,
   },
 });
